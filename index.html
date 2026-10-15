@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi VPS & Cloud AWS</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f6fb;
+            color: #1f2937;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #173b70, #2677b8);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            margin: 15px 0 5px;
+        }
+
+        header p {
+            color: #e4f1ff;
+        }
+
+        main {
+            width: 92%;
+            max-width: 950px;
+            margin: 30px auto;
+        }
+
+        section {
+            background: white;
+            padding: 24px;
+            margin-bottom: 22px;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        h2 {
+            color: #174b82;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #1d4f7a;
+        }
+
+        .label {
+            display: inline-block;
+            background: #e7f2ff;
+            color: #174b82;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 5px solid #3182ce;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .card p {
+            margin-bottom: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #dce4ee;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #eaf3fc;
+            color: #174b82;
+        }
+
+        .note {
+            background: #fff7df;
+            border-left: 5px solid #e5a000;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #64748b;
+        }
+
+        @media (max-width: 650px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 18px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <span class="label">LKPD Praktik VPS AWS</span>
+        <h1>Fase 1: Pengenalan VPS & Cloud</h1>
+        <p>Memahami layanan hosting dan server cloud</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>1. Pengertian Server dan Cloud</h2>
+
+            <p>
+                <strong>Server</strong> adalah komputer yang menyediakan
+                layanan atau data untuk komputer lain.
+            </p>
+
+            <p>
+                <strong>Cloud Computing</strong> adalah penggunaan sumber
+                daya komputasi melalui internet, misalnya untuk menjalankan
+                server dan menyimpan data.
+            </p>
+
+            <p>
+                Dalam materi ini, kita akan mempelajari empat layanan,
+                yaitu Shared Hosting, Dedicated Server, Amazon Lightsail,
+                dan Amazon EC2.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Jenis-Jenis Layanan</h2>
+
+            <div class="container">
+
+                <div class="card">
+                    <span class="label">Hosting Bersama</span>
+                    <h3>Shared Hosting</h3>
+
+                    <p>
+                        Layanan hosting yang memungkinkan beberapa pengguna
+                        berbagi sumber daya dalam satu server.
+                    </p>
+
+                    <p>
+                        <strong>Contoh sederhana:</strong> seperti tinggal
+                        di rumah bersama dan menggunakan fasilitas yang sama.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="label">Server Khusus</span>
+                    <h3>Dedicated Server</h3>
+
+                    <p>
+                        Server fisik yang digunakan khusus oleh satu
+                        pengguna atau organisasi.
+                    </p>
+
+                    <p>
+                        <strong>Contoh sederhana:</strong> seperti memiliki
+                        rumah sendiri sehingga kendali lebih besar.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="label">Cloud Sederhana</span>
+                    <h3>Amazon Lightsail</h3>
+
+                    <p>
+                        Layanan cloud AWS yang memudahkan pengguna membuat
+                        dan mengelola server virtual.
+                    </p>
+
+                    <p>
+                        <strong>Keunggulan:</strong> pengaturan lebih sederhana
+                        untuk memulai menggunakan cloud.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="label">Cloud Fleksibel</span>
+                    <h3>Amazon EC2</h3>
+
+                    <p>
+                        Layanan AWS untuk membuat dan menjalankan server
+                        virtual yang disebut instance.
+                    </p>
+
+                    <p>
+                        <strong>Keunggulan:</strong> konfigurasi server
+                        dapat disesuaikan dengan kebutuhan.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Tabel Perbandingan</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Layanan</th>
+                        <th>Pengertian</th>
+                        <th>Ciri Utama</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Shared Hosting</td>
+                        <td>Banyak pengguna berbagi satu server.</td>
+                        <td>Sumber daya digunakan bersama.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Dedicated Server</td>
+                        <td>Satu server fisik untuk satu pengguna.</td>
+                        <td>Kendali lebih besar.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Amazon Lightsail</td>
+                        <td>Layanan server cloud yang sederhana.</td>
+                        <td>Mudah untuk pemula.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Amazon EC2</td>
+                        <td>Layanan server virtual AWS.</td>
+                        <td>Fleksibel dan dapat dikonfigurasi.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>4. Kesimpulan</h2>
+
+            <ul>
+                <li>
+                    <strong>Shared Hosting:</strong>
+                    server digunakan bersama oleh banyak pengguna.
+                </li>
+
+                <li>
+                    <strong>Dedicated Server:</strong>
+                    server fisik digunakan khusus oleh satu pengguna.
+                </li>
+
+                <li>
+                    <strong>Amazon Lightsail:</strong>
+                    layanan cloud AWS dengan pengaturan sederhana.
+                </li>
+
+                <li>
+                    <strong>Amazon EC2:</strong>
+                    layanan server virtual AWS yang fleksibel.
+                </li>
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer>
+        Materi Pembelajaran | Manajemen Server VPS AWS
+    </footer>
+
+</body>
+</html>
